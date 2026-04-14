@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 - Website Saya</title>
+<style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        table.layout-table {
+            width: 90%; 
+            max-width: 1200px; 
+            border-spacing: 2px;
+            margin: 0 auto; 
+        }
+
+        .layout-table td {
+            padding: 15px; 
+        }
+
+        .sidebar {
+            width: 20%; 
+            vertical-align: top;
+        }
+
+        .sidebar ul {
+            list-style-type: square; 
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        /* --- TAMBAHAN ANIMASI 1: HOVER PADA MENU --- */
+        .sidebar a {
+            color: blue;
+            font-family: Arial, sans-serif; 
+            text-decoration: none; /* Hilangkan garis bawah default agar lebih bersih */
+            font-weight: normal;
+            display: inline-block; /* Diperlukan agar animasi transform bekerja */
+            transition: all 0.3s ease; /* Membuat perubahan warna dan gerak menjadi halus */
+        }
+
+        .sidebar a:hover {
+            color: #FF9900; /* Berubah jadi warna oranye khas tabel latihanmu */
+            font-weight: bold;
+            transform: translateX(5px); /* Menu bergeser 5 pixel ke kanan saat di-hover */
+        }
+        /* ------------------------------------------- */
+
+        /* --- TAMBAHAN ANIMASI 2: FADE IN KONTEN --- */
+        @keyframes munculPerlahan {
+            from {
+                opacity: 0; /* Awalnya tembus pandang/hilang */
+                transform: translateY(20px); /* Posisinya turun sedikit */
+            }
+            to {
+                opacity: 1; /* Menjadi terlihat sepenuhnya */
+                transform: translateY(0); /* Posisinya kembali normal */
+            }
+        }
+
+        .main-content {
+            text-align: center;
+            vertical-align: middle; 
+            /* Terapkan animasi di sini */
+            animation: munculPerlahan 1s ease-out; 
+        }
+        /* ------------------------------------------- */
+
+        .main-content h1 {
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="layout-table" border="1">
+        
+        <tr>
+            <td colspan="2">
+                <img src="c:\Users\mrhid\Pictures\Logo Universitas Pamulang (Unpam).png" alt="Logo Kampus" width="70">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="sidebar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="latihan1.html">Latihan 1</a></li>
+                    <li><a href="latihan2.html">Latihan 2</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                </ul>
+            </td>
+            
+            <td class="main-content">
+                
+                <table class="tabel-biodata" cellspacing="2" cellpadding="2" border="1" width="90%">
+                    <caption>BIODATA SISWA</caption>
+                    <tr>
+                        <th width="20%"><font color="blue" face="Arial" size="4">Nama</font></th>
+                        <th width="40%">Alamat</th>
+                        <th width="40%" colspan="3" align="center">Telepon</th>
+                    </tr>
+                    <tr>
+                        <td>Endar Nirmala</td>
+                        <td>&nbsp;Jl. Rasamala 3, Jakarta</td>
+                        <td align="center">021-5678910</td>
+                        <td align="center">0812285104</td>
+                        <td align="center">021-56788901</td>
+                    </tr>
+                    <tr>
+                        <td>Wirastuti Wiraguna</td>
+                        <td>&nbsp;Jl. Permata 5, Jakarta</td>
+                        <td align="center">021-76456982</td>
+                        <td align="center">08183457298</td>
+                        <td align="center">021-66543881</td>
+                    </tr>
+                </table>
+
+                <p>&nbsp;</p> <table class="tabel-biodata" border="1" width="90%">
+                    <caption>BIODATA SISWA</caption>
+                    <tr>
+                        <th width="25%">Nama</th>
+                        <th width="40%">Alamat</th>
+                        <th width="35%" align="center">Telepon</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" valign="top">Angga Kusuma</td>
+                        <td rowspan="3" valign="top">&nbsp; Jl. Karbela 2, Jakarta</td>
+                        <td align="center">021-55667788</td>
+                    </tr>
+                    <tr>
+                        <td align="center">08131445689</td>
+                    </tr>
+                    <tr>
+                        <td align="center">021-56788901</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" valign="top">Wirastuti Wiraguna</td>
+                        <td rowspan="3" valign="top">&nbsp;Jl. Permata&nbsp; 5, Jakarta</td>
+                        <td align="center">021-76456982</td>
+                    </tr>
+                    <tr>
+                        <td align="center">08183457298</td>
+                    </tr>
+                    <tr>
+                        <td align="center">021-66543881</td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="footer">
+                Copyright Iqbal Fahgrib Yunanda
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

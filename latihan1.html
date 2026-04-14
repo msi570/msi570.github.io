@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1 - Website Saya</title>
+<style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        table.layout-table {
+            width: 90%; 
+            max-width: 1200px; 
+            border-spacing: 2px;
+            margin: 0 auto; 
+        }
+
+        .layout-table td {
+            padding: 15px; 
+        }
+
+        .sidebar {
+            width: 20%; 
+            vertical-align: top;
+        }
+
+        .sidebar ul {
+            list-style-type: square; 
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        /* --- TAMBAHAN ANIMASI 1: HOVER PADA MENU --- */
+        .sidebar a {
+            color: blue;
+            font-family: Arial, sans-serif; 
+            text-decoration: none; /* Hilangkan garis bawah default agar lebih bersih */
+            font-weight: normal;
+            display: inline-block; /* Diperlukan agar animasi transform bekerja */
+            transition: all 0.3s ease; /* Membuat perubahan warna dan gerak menjadi halus */
+        }
+
+        .sidebar a:hover {
+            color: #FF9900; /* Berubah jadi warna oranye khas tabel latihanmu */
+            font-weight: bold;
+            transform: translateX(5px); /* Menu bergeser 5 pixel ke kanan saat di-hover */
+        }
+        /* ------------------------------------------- */
+
+        /* --- TAMBAHAN ANIMASI 2: FADE IN KONTEN --- */
+        @keyframes munculPerlahan {
+            from {
+                opacity: 0; /* Awalnya tembus pandang/hilang */
+                transform: translateY(20px); /* Posisinya turun sedikit */
+            }
+            to {
+                opacity: 1; /* Menjadi terlihat sepenuhnya */
+                transform: translateY(0); /* Posisinya kembali normal */
+            }
+        }
+
+        .main-content {
+            text-align: center;
+            vertical-align: middle; 
+            /* Terapkan animasi di sini */
+            animation: munculPerlahan 1s ease-out; 
+        }
+        /* ------------------------------------------- */
+
+        .main-content h1 {
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="layout-table" border="1">
+        
+        <tr>
+            <td colspan="2">
+                <img src="c:\Users\mrhid\Pictures\Logo Universitas Pamulang (Unpam).png" alt="Logo Kampus" width="70">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="sidebar">
+                <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="latihan1.html">Latihan 1</a></li>
+    <li><a href="latihan2.html">Latihan 2</a></li>
+    <li><a href="profil.html">Profil</a></li>
+</ul>
+            </td>
+            
+            <td class="main-content">
+        
+                
+                <div align="center">
+                    <table class="tabel-latihan" border="2" width="450">
+                        <tr>
+                            <td colspan="3" bgcolor="#FF9900">Kolom 1,2 dan 3 dengan colspan </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Kolom 1A<br>+Kolom 1B (rowspan)</td>
+                            <td>Kolom 2A</td>
+                            <td rowspan="2">Kolom 3A<br>+Kolom 3B (rowspan)</td>
+                        </tr>
+                        <tr>
+                            <td width="100" height="137">
+                                <img title="myPerform" src="c:\Users\mrhid\Pictures\giphy.gif" width="250" height="250" alt="myPicture">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kolom 1C</td>
+                            <td>Kolom 2C</td>
+                            <td>Kolom 3C</td>
+                        </tr>
+                    </table>
+                </div>
+                </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="footer">
+                Copyright Iqbal Fahgrib Yunanda
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

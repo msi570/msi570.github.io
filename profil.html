@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Website Saya</title>
+<style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        table.layout-table {
+            width: 90%; 
+            max-width: 1200px; 
+            border-spacing: 2px;
+            margin: 0 auto; 
+        }
+
+        .layout-table td {
+            padding: 15px; 
+        }
+
+        .sidebar {
+            width: 20%; 
+            vertical-align: top;
+        }
+
+        .sidebar ul {
+            list-style-type: square; 
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        /* --- TAMBAHAN ANIMASI 1: HOVER PADA MENU --- */
+        .sidebar a {
+            color: blue;
+            font-family: Arial, sans-serif; 
+            text-decoration: none; /* Hilangkan garis bawah default agar lebih bersih */
+            font-weight: normal;
+            display: inline-block; /* Diperlukan agar animasi transform bekerja */
+            transition: all 0.3s ease; /* Membuat perubahan warna dan gerak menjadi halus */
+        }
+
+        .sidebar a:hover {
+            color: #FF9900; /* Berubah jadi warna oranye khas tabel latihanmu */
+            font-weight: bold;
+            transform: translateX(5px); /* Menu bergeser 5 pixel ke kanan saat di-hover */
+        }
+        /* ------------------------------------------- */
+
+        /* --- TAMBAHAN ANIMASI 2: FADE IN KONTEN --- */
+        @keyframes munculPerlahan {
+            from {
+                opacity: 0; /* Awalnya tembus pandang/hilang */
+                transform: translateY(20px); /* Posisinya turun sedikit */
+            }
+            to {
+                opacity: 1; /* Menjadi terlihat sepenuhnya */
+                transform: translateY(0); /* Posisinya kembali normal */
+            }
+        }
+
+        .main-content {
+            text-align: center;
+            vertical-align: middle; 
+            /* Terapkan animasi di sini */
+            animation: munculPerlahan 1s ease-out; 
+        }
+        /* ------------------------------------------- */
+
+        .main-content h1 {
+            color: black;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="layout-table" border="1">
+        
+        <tr>
+            <td colspan="2">
+                <img src="c:\Users\mrhid\Pictures\Logo Universitas Pamulang (Unpam).png" alt="Logo Kampus" width="80">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="sidebar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="latihan1.html">Latihan 1</a></li>
+                    <li><a href="latihan2.html">Latihan 2</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                </ul>
+            </td>
+            
+            <td class="main-content">
+        
+                
+                <table class="tabel-profil">
+                    <tr>
+                        <td class="label">Nama</td>
+                        <td>: Iqbal Fahgrib Yunanda</td>
+                    </tr>
+                    <tr>
+                        <td class="label">NIM</td>
+                        <td>: 231011450037</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kelas</td>
+                        <td>: 05TPLP001</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Program Studi</td>
+                        <td>: Teknik Informatika</td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="footer">
+                Copyright Iqbal Fahgrib Yunanda
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
